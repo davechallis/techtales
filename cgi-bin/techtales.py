@@ -3,9 +3,25 @@
 import cherrypy
 from simplejson import dumps 
 import os.path
+from ComparisonChart import ComparisonChart
 from Chart import Chart as GoogleChart
 from Extract import Extract
 #cherrypy.config['log.error_file'] = '/home/www/sites/techtales/logs/py_error.log'
+
+class CompareChart:
+	def default(self, url1=None, url2=None, field=None):
+		if not url1 or not url2 or not field:
+			return dumps({'status':'error', 'message':'Need URIs and field'})
+		extract1 = Extract(url1)
+		extract2 = Extract(url2)
+		data1 = extract1.run()
+		data2 = extract2.run()
+		chart = ComparisonChart(url1, url2, data1, data2)
+		url = chart.get_graph_url_for_field(field)
+		return dumps({'status':'ok', 'url':url})		
+	
+	default.exposed = True
+
 
 class Chart:
 	def default(self, url=None, fields=None):
