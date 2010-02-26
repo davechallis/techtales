@@ -10,7 +10,7 @@ class MiscExtractor(Extractor):
 		
 		comments = re.findall(r'<!--(.+)-->', text, re.M|re.I)
 		for comment in comments:
-			results['secret.ness'] += round(len(comment)/10)
+			results['secret.ness'] += len(comment)
 		
 		results['misc.length'] = len(text)	
 	
