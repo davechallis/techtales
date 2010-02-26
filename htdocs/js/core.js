@@ -23,7 +23,7 @@ function getCombinedSiteGraph()
 			var siteurl = $("#siteurl1").val();
 			var siteurl = $("#siteurl2").val();
 			var tag1 = $("#tag").val();
-			$.getJSON("/service/combined", {url1:siteurl, url2:siteurl2, field:tag1}, handleJSON);
+			$.getJSON("/service/comparechart", {url1:siteurl, url2:siteurl2, field:tag1}, handleJSON);
 	});
 }
 
