@@ -18,7 +18,7 @@ class LinkExtractor(Extractor):
 		for rss in rsses:
 			results['link.rss'] += 1
 
-		styles = re.findall(r'<rel=[\'"]stylesheet[\'"]', text, re.I|re.M)
+		styles = re.findall(r'rel=[\'"]stylesheet[\'"]', text, re.I|re.M)
 		for style in styles:
 			results['link.style'] += 1
 
