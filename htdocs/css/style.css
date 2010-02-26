@@ -1,9 +1,41 @@
 * {
 	margin: 0;
 }
+
+h1 {
+	font-family: cursive;
+	font-size: 32pt;
+	color: #fff;
+}
+
 html, body {
 	height: 100%;
 }
+
+.formlabel {
+	color: #fff;
+	font-size: 14pt;
+}
+
+.formrow {
+	margin-bottom: 10px;
+}
+
+#submit {
+	border: 1px solid #ccc;
+	background: #000;
+	color: #fff;
+}
+
+#siteurl {
+	font-size: 12pt;
+}
+
+.tag {
+	font-size: 12pt;
+	font-family: monospace;
+}
+
 .wrapper {
 	min-height: 100%;
 	height: auto !important;
@@ -34,29 +66,11 @@ body
 	background: #cccccc;
 }
 
-.enartist li
-{
-	list-style-type: none;
-}
-
-.channelimg
-{
-	border: 0;	
-	width: 48px;
-	height: 48px;	
-}
-
 .separator
 {
 	border-bottom: dashed 1px #222222;
 	margin-bottom: 10px;
 	margin-top: 3px;
-}
-
-.gloss
-{
-	border-bottom: dashed 1px #222222;
-	margin-bottom: 3px;
 }
 
 .heading
@@ -68,50 +82,6 @@ body
 	color: #ffffff;
 }
 
-#username, #password, #submit
-{
-	border: solid 1px #dddddd;
-	padding: 3px;
-}
-
-#submit {
-	margin-top: 5px;
-}
-
-#artists
-{
-	display: none;
-}
-
-#tracks
-{
-	display: none;
-}
-
-#current_track
-{
-	display: none;
-}
-
-#track_stats
-{
-	display: none;
-}
-
-#artists_data, #tracks_data
-{
-	text-align: right;
-}
-
-.throbber
-{
-}
-
-.stats
-{
-	font-size: 9pt;
-}
-
 a {
 	text-decoration: none;
 	color: #eeeeff
@@ -120,17 +90,4 @@ a {
 a:hover {
 	text-decoration: underline;
 	color: #eeeeff
-}
-
-.frown {
-	text-align: center;
-	font-size: 23pt;
-	color: #ffffff;
-}
-
-#login_failed {
-	display: none;
-	font-size: 8pt;
-	color: #ffffff;
-	margin-left: 5px;
 }

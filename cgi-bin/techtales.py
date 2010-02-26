@@ -3,19 +3,35 @@
 import cherrypy
 from simplejson import dumps 
 import os.path
-
+from Chart import Chart as GoogleChart
+from Extract import Extract
 #cherrypy.config['log.error_file'] = '/home/www/sites/techtales/logs/py_error.log'
 
+class Chart:
+	def default(self, url=None, field=None):
+		if not url or not field:
+			return dumps({'status':'error', 'message':'Need URI and field'})
+		extract = Extract(url)
+		data = extract.run()
+		chart = GoogleChart(data)
+		url = chart.get_graph_url_for_field(field)
+		return dumps({'status':'ok', 'url':url})		
+	
+	default.exposed = True
+
 class Stats:
-	def default(self, uri=None):
-		if not uri:
-		    return dumps({'status':'error', 'message':'Need URI'})
-		return dumps({})
+	def default(self, url=None):
+		if not url:
+		    return dumps({'status':'error', 'message':'Need URL'})
+		extract = Extract(url)
+		data = extract.run()
+		return dumps({'status':'ok', 'data':data})
 
 	default.exposed = True
 
 class Main:
 	stats = Stats()
+	chart = Chart()
 #
 # These methods take care of running the application via either mod_python or
 # stand-alone using the built-in CherryPy server.
