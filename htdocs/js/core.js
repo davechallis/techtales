@@ -6,6 +6,7 @@ function handleJSON(data, textStatus)
 		var img = $("<img />");
 		img.attr("src", data.url);
 		img.appendTo("#graph");
+		$("#graph").fadeIn();
 	}
 }
 
@@ -16,6 +17,8 @@ function getSiteGraph()
 	var tag2 = $("#tag2").val();
 	var tag3 = $("#tag3").val();
 	$.getJSON("/service/chart", {url:siteurl,field:tag1}, handleJSON);
+
+	$("#graph").fadeOut();
 }
 
 $(function() {
