@@ -6,12 +6,14 @@ function handleJSON(data, textStatus)
 		var img = $("<img />");
 		img.attr("src", data.url);
 		img.appendTo("#graph");
+		$("#throbber").fadeOut();
 		$("#graph").fadeIn();
 	}
 }
 
 function getSiteGraph()
 {
+	$("#throbber").fadeIn();
 	var siteurl = $("#siteurl").val();
 	var tag1 = $("#tag1").val();
 	var tag2 = $("#tag2").val();

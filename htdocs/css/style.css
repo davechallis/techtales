@@ -96,3 +96,9 @@ a:hover {
 	text-decoration: underline;
 	color: #eeeeff
 }
+
+#throbber {
+	display: none;
+	margin-top: 100px;
+	text-align: center;
+}
