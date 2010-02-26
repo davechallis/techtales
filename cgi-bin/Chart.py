@@ -8,6 +8,9 @@ class Chart(object):
         self.data = extracted_data
 
     def get_graph_url_for_fields(self, fields):
+        if len(fields) == 1:
+            return self.get_graph_url_for_field(fields[0])
+
         data = self.data
         dates = data.keys()
         dates.sort()
