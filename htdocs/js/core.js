@@ -20,10 +20,10 @@ function getCombinedSiteGraph()
 	$("#graph").fadeOut(function()
 	{
 			$("#throbber").fadeIn();
-			var siteurl = $("#siteurl1").val();
-			var siteurl = $("#siteurl2").val();
-			var tag1 = $("#tag").val();
-			$.getJSON("/service/comparechart", {url1:siteurl, url2:siteurl2, field:tag1}, handleJSON);
+			var siteurl1 = $("#siteurl1").val();
+			var siteurl2 = $("#siteurl2").val();
+			var tag = $("#tag").val();
+			$.getJSON("/service/comparechart", {url1:siteurl1, url2:siteurl2, field:tag}, handleJSON);
 	});
 }
 
