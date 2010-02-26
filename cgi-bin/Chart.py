@@ -15,19 +15,26 @@ class Chart(object):
         dates = data.keys()
         dates.sort()
 
+        total_years = []
+        empty_chart_data = {}
+        for date in dates:
+            year = date[0:4]
+            total_years.append(year)
+        total_years = list(set(total_years))
+
+        for year in range(int(total_years[0]), int(total_years[-1])+1):
+            empty_chart_data[year] = {}
+            for month in range(1,13):
+                empty_chart_data[year][month] = []
+
         field_data = {}
 
         max = 0
         for field in fields:
-            chart_data = {}
+            chart_data = empty_chart_data.copy()
             for date in dates:
                 year = int(date[0:4])
                 month = int(date[4:6])
-
-                if not chart_data.has_key(year):
-                    chart_data[year] = {}
-                    for i in range (1, 13):
-                        chart_data[year][i] = []
 
                 if data[date].has_key(field):
                     number = int(data[date][field])
@@ -109,15 +116,21 @@ class Chart(object):
 
         chart_data = {}
 
+        total_years = []
+        for date in dates:
+            year = date[0:4]
+            total_years.append(year)
+        total_years = list(set(total_years))
+
+        for year in range(int(total_years[0]), int(total_years[-1])+1):
+            chart_data[year] = {}
+            for month in range(1,13):
+                chart_data[year][month] = []
+
         max = 0
         for date in dates:
             year = int(date[0:4])
             month = int(date[4:6])
-
-            if not chart_data.has_key(year):
-                chart_data[year] = {}
-                for i in range (1, 13):
-                    chart_data[year][i] = []
 
             if data[date].has_key(field):
                 number = int(data[date][field])
@@ -174,4 +187,3 @@ class Chart(object):
         }
         url = 'http://chart.apis.google.com/chart?' + urllib.urlencode(chart_query_data)
         return url
-
