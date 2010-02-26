@@ -1,0 +1,136 @@
+* {
+	margin: 0;
+}
+html, body {
+	height: 100%;
+}
+.wrapper {
+	min-height: 100%;
+	height: auto !important;
+	height: 100%;
+	margin: 0 auto -142px; /* the bottom margin is the negative value of the footer's height */
+}
+.footer, .push {
+	height: 142px; /* .push must be the same height as .footer */
+}
+
+.footer
+{
+	border-top: dashed 1px #222222;
+	width: 960px;
+	margin: auto;
+}
+
+body
+{
+	background: #000000;
+	color: orange;
+	font-family: sans-serif;
+}
+
+.contentbox
+{
+	height: 200px;
+	background: #cccccc;
+}
+
+.enartist li
+{
+	list-style-type: none;
+}
+
+.channelimg
+{
+	border: 0;	
+	width: 48px;
+	height: 48px;	
+}
+
+.separator
+{
+	border-bottom: dashed 1px #222222;
+	margin-bottom: 10px;
+	margin-top: 3px;
+}
+
+.gloss
+{
+	border-bottom: dashed 1px #222222;
+	margin-bottom: 3px;
+}
+
+.heading
+{
+	font-family: sans-serif;
+	font-size: 12pt;
+	border-bottom: dashed 1px #222222;
+	margin-bottom: 6px;
+	color: #ffffff;
+}
+
+#username, #password, #submit
+{
+	border: solid 1px #dddddd;
+	padding: 3px;
+}
+
+#submit {
+	margin-top: 5px;
+}
+
+#artists
+{
+	display: none;
+}
+
+#tracks
+{
+	display: none;
+}
+
+#current_track
+{
+	display: none;
+}
+
+#track_stats
+{
+	display: none;
+}
+
+#artists_data, #tracks_data
+{
+	text-align: right;
+}
+
+.throbber
+{
+}
+
+.stats
+{
+	font-size: 9pt;
+}
+
+a {
+	text-decoration: none;
+	color: #eeeeff
+}
+
+a:hover {
+	text-decoration: underline;
+	color: #eeeeff
+}
+
+.frown {
+	text-align: center;
+	font-size: 23pt;
+	color: #ffffff;
+}
+
+#login_failed {
+	display: none;
+	font-size: 8pt;
+	color: #ffffff;
+	margin-left: 5px;
+}
