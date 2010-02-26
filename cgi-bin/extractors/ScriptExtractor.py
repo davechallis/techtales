@@ -22,6 +22,10 @@ class ScriptExtractor(Extractor):
 		if re.search(r'[\'"][^\'"]+jquery.js[\'"]', text, re.M|re.I):
 			results['js.ness'] += 1
 			results['js.jquery'] = 1
-
+		
+		jss = re.findall(r'type=[\'"]text/javascript[\'"]', text, re.I|re.M)
+		for js in jss:
+			results['js.ness'] += 1
+		
 		return results 
 

@@ -9,7 +9,6 @@ class LinkExtractor(Extractor):
 		results['link.rss'] = 0		
 		results['link.atom'] = 0		
 		results['link.style'] = 0		
-		results['link.js'] = 0		
 		
 		atoms = re.findall(r'\s+type=[\'"]application/atom+xml[\'"]', text, re.M|re.I)
 		for atom in atoms:
@@ -23,8 +22,4 @@ class LinkExtractor(Extractor):
 		for style in styles:
 			results['link.style'] += 1
 		
-		jss = re.findall(r'type=[\'"]text/javascript[\'"]', text, re.I|re.M)
-		for js in jss:
-			results['link.js'] += 1
-
 		return results 
