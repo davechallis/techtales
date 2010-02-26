@@ -17,9 +17,9 @@ class Extract(object):
                 f.close()
 
                 date = file.split('.').pop()
-                self.results[date] = 'x'
-                self.run_extractors()
-            
+                self.results[date] = self.run_extractors()
+        return self.results
+
 
     def run_extractors(self):
         skip = ('Extractor.py', '__init__.py')
@@ -39,9 +39,9 @@ class Extract(object):
             line = 'mod.%s.%s()' % (classname,classname)
             obj = eval(line)
             results = obj.run(self.html)
-            print results
+            data.update(results)
 
-
+        return data
 
 x = Extract('www.ecs.soton.ac.uk')
-x.run()
+print x.run()
