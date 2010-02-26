@@ -12,4 +12,6 @@ class MiscExtractor(Extractor):
 		for comment in comments:
 			results['secret.ness'] += round(len(comment)/10)
 		
+		results['misc.length'] = len(text)	
+	
 		return results 
