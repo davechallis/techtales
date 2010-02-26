@@ -2,6 +2,7 @@ function handleJSON(data, textStatus)
 {
 	if(data)
 	{
+		$("#graph").empty();
 		var img = $("<img />");
 		img.attr("src", data.url);
 		img.appendTo("#graph");
