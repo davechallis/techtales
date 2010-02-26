@@ -14,7 +14,8 @@ class Chart:
 		extract = Extract(url)
 		data = extract.run()
 		chart = GoogleChart(data)
-		url = chart.get_graph_url_for_fields(fields)
+		field_arr = fields.split(",")
+		url = chart.get_graph_url_for_fields(field_arr)
 		return dumps({'status':'ok', 'url':url})		
 	
 	default.exposed = True
