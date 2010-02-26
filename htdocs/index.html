@@ -1,30 +1,39 @@
 <html>
 <head>
-<script type="text/javascript" src="/js/jquery-1.4.1.min.js"></script>
-<script type="text/javascript" src="/js/md5-min.js"></script>
+<script type="text/javascript" src="js/jquery-1.4.1.min.js"></script>
+<script type="text/javascript" src="js/md5-min.js"></script>
 <script type="text/javascript" src="js/jquery.lightbox-0.5.min.js"></script>
-<script type="text/javascript" src="/js/core.js"></script>
-<link rel="stylesheet" href="/css/reset.css" type="text/css" /> 
-<link rel="stylesheet" href="/css/text.css" type="text/css" /> 
-<link rel="stylesheet" href="/css/960.css" type="text/css" /> 
-<link rel="stylesheet" href="/css/style.css" type="text/css" /> 
-<link rel="stylesheet" href="/css/jquery.lightbox-0.5.css" type="text/css" /> 
+<script type="text/javascript" src="js/core.js"></script>
+<link rel="stylesheet" href="css/reset.css" type="text/css" /> 
+<link rel="stylesheet" href="css/text.css" type="text/css" /> 
+<link rel="stylesheet" href="css/960.css" type="text/css" /> 
+<link rel="stylesheet" href="css/style.css" type="text/css" /> 
+<link rel="stylesheet" href="css/jquery.lightbox-0.5.css" type="text/css" /> 
 <title>TechTales</title>
 </head>
 <body>
+
 <div class="container_12">
-<div class="grid_14 suffix_1 prefix_1">
-<h1>Tech Tales</h1>
 
-<form><input type="text" name="tag1" />&nbsp;<input type="text" name="tag2" />&nbsp;<input type="text" name="tag3" />&nbsp;<input type="submit" /></form>
-
-</div>
-<div id="graphbox">
-</div>
-</div>
-<div class="clear"></div>  
+<div class="grid_12">
+	<h1>Tech Tales</h1>
+	<a href="/">Analyze</a>&nbsp;<a href="/">Compare</a>
 </div>
 
+<div class="grid_12">
+	<div class="grid_6 alpha">
+		<div class="formlabel">Site</div>
+		<div class="formrow"><input type="text" id="siteurl" name="site" size="32" value="www.ecs.soton.ac.uk" /></div>
+		<div class="formlabel">Tags</div>
+		<div class="formrow"><input type="text" size="6" class="tag" id="tag1" name="tag1" value="div" />&nbsp;<input type="text" size="6" class="tag" id="tag2" name="tag2" value="span" />&nbsp;<input type="text" size="6" class="tag" id="tag3" name="tag3" value="table" /></div>
+		<div class="formrow"><input type="submit" id="submit" value="Analyze" /></div>
+	</div>
+	<div class="grid_6 omega">
+		<div id="graph"></div>
+	</div>
+</div>
+
+</div>
 </body>
 </html>
 
