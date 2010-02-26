@@ -6,8 +6,7 @@ function handleJSON(data, textStatus)
 		var img = $("<img />");
 		img.attr("src", data.url);
 		img.appendTo("#graph");
-		$("#throbber").fadeOut();
-		$("#graph").fadeIn();
+		$("#throbber").fadeOut(function() { $("#graph").fadeIn(); });
 	}
 }
 
