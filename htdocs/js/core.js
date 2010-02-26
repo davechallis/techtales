@@ -13,6 +13,7 @@ function handleJSON(data, textStatus)
 
 function getSiteGraph()
 {
+	$("#graph").fadeOut();
 	$("#throbber").fadeIn();
 	var siteurl = $("#siteurl").val();
 	var tag1 = $("#tag1").val();
@@ -20,7 +21,6 @@ function getSiteGraph()
 	var tag3 = $("#tag3").val();
 	$.getJSON("/service/chart", {url:siteurl,fields:[tag1,tag2,tag3].join(",")}, handleJSON);
 
-	$("#graph").fadeOut();
 }
 
 $(function() {
