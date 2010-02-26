@@ -1,0 +1,8 @@
+$(function() {
+
+$("#submit").click(getSiteGraph);
+
+});
+
+
+
