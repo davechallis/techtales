@@ -10,6 +10,19 @@ function handleJSON(data, textStatus)
 	}
 }
 
+function getCombinedSiteGraph()
+{
+	$("#graph").fadeOut(function()
+	{
+			$("#throbber").fadeIn();
+			var siteurl = $("#siteurl1").val();
+			var siteurl = $("#siteurl2").val();
+			var tag1 = $("#tag").val();
+			$.getJSON("/service/combined", {url1:siteurl, url2:siteurl2, field:tag1}, handleJSON);
+	});
+}
+
+
 function getSiteGraph()
 {
 	$("#graph").fadeOut(function()
@@ -22,11 +35,4 @@ function getSiteGraph()
 			$.getJSON("/service/chart", {url:siteurl,fields:[tag1,tag2,tag3].join(",")}, handleJSON);
 	});
 }
-
-$(function() {
-
-$("#submit").click(getSiteGraph);
-
-});
-
 
