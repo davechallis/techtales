@@ -42,6 +42,3 @@ class Extract(object):
             data.update(results)
 
         return data
-
-x = Extract('www.ecs.soton.ac.uk')
-print x.run()
