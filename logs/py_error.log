@@ -15,3 +15,118 @@
 [26/Feb/2010:10:49:14] ENGINE Bus EXITING
 [26/Feb/2010:10:49:14] ENGINE Bus EXITED
 [26/Feb/2010:10:49:14] ENGINE Waiting for child threads to terminate...
+[26/Feb/2010:11:14:02] ENGINE Listening for SIGHUP.
+[26/Feb/2010:11:14:02] ENGINE Listening for SIGTERM.
+[26/Feb/2010:11:14:02] ENGINE Listening for SIGUSR1.
+[26/Feb/2010:11:14:02] ENGINE Bus STARTING
+[26/Feb/2010:11:14:02] ENGINE Started monitor thread '_TimeoutMonitor'.
+[26/Feb/2010:11:14:02] ENGINE Started monitor thread 'Autoreloader'.
+[26/Feb/2010:11:14:02] ENGINE Serving on 127.0.0.1:8080
+[26/Feb/2010:11:14:02] ENGINE Bus STARTED
+[26/Feb/2010:11:24:32] ENGINE Restarting because cgi-bin/techtales.py changed.
+[26/Feb/2010:11:24:32] ENGINE Stopped thread 'Autoreloader'.
+[26/Feb/2010:11:24:32] ENGINE Bus STOPPING
+[26/Feb/2010:11:24:32] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('127.0.0.1', 8080)) shut down
+[26/Feb/2010:11:24:32] ENGINE Stopped thread '_TimeoutMonitor'.
+[26/Feb/2010:11:24:32] ENGINE Bus STOPPED
+[26/Feb/2010:11:24:32] ENGINE Bus EXITING
+[26/Feb/2010:11:24:32] ENGINE Bus EXITED
+[26/Feb/2010:11:24:32] ENGINE Waiting for child threads to terminate...
+[26/Feb/2010:11:24:32] ENGINE Re-spawning cgi-bin/techtales.py
+[26/Feb/2010:11:24:34] ENGINE Listening for SIGHUP.
+[26/Feb/2010:11:24:34] ENGINE Listening for SIGTERM.
+[26/Feb/2010:11:24:34] ENGINE Listening for SIGUSR1.
+[26/Feb/2010:11:24:34] ENGINE Bus STARTING
+[26/Feb/2010:11:24:34] ENGINE Started monitor thread '_TimeoutMonitor'.
+[26/Feb/2010:11:24:34] ENGINE Started monitor thread 'Autoreloader'.
+[26/Feb/2010:11:24:34] ENGINE Serving on 127.0.0.1:8080
+[26/Feb/2010:11:24:34] ENGINE Bus STARTED
+[26/Feb/2010:11:25:23] ENGINE Restarting because cgi-bin/techtales.py changed.
+[26/Feb/2010:11:25:23] ENGINE Stopped thread 'Autoreloader'.
+[26/Feb/2010:11:25:23] ENGINE Bus STOPPING
+[26/Feb/2010:11:25:23] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('127.0.0.1', 8080)) shut down
+[26/Feb/2010:11:25:23] ENGINE Stopped thread '_TimeoutMonitor'.
+[26/Feb/2010:11:25:23] ENGINE Bus STOPPED
+[26/Feb/2010:11:25:23] ENGINE Bus EXITING
+[26/Feb/2010:11:25:23] ENGINE Bus EXITED
+[26/Feb/2010:11:25:23] ENGINE Waiting for child threads to terminate...
+[26/Feb/2010:11:25:23] ENGINE Re-spawning cgi-bin/techtales.py
+[26/Feb/2010:11:25:25] ENGINE Listening for SIGHUP.
+[26/Feb/2010:11:25:25] ENGINE Listening for SIGTERM.
+[26/Feb/2010:11:25:25] ENGINE Listening for SIGUSR1.
+[26/Feb/2010:11:25:25] ENGINE Bus STARTING
+[26/Feb/2010:11:25:25] ENGINE Started monitor thread '_TimeoutMonitor'.
+[26/Feb/2010:11:25:25] ENGINE Started monitor thread 'Autoreloader'.
+[26/Feb/2010:11:25:25] ENGINE Serving on 127.0.0.1:8080
+[26/Feb/2010:11:25:25] ENGINE Bus STARTED
+[26/Feb/2010:11:25:38] ENGINE Restarting because cgi-bin/techtales.py changed.
+[26/Feb/2010:11:25:38] ENGINE Stopped thread 'Autoreloader'.
+[26/Feb/2010:11:25:38] ENGINE Bus STOPPING
+[26/Feb/2010:11:25:38] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('127.0.0.1', 8080)) shut down
+[26/Feb/2010:11:25:38] ENGINE Stopped thread '_TimeoutMonitor'.
+[26/Feb/2010:11:25:38] ENGINE Bus STOPPED
+[26/Feb/2010:11:25:38] ENGINE Bus EXITING
+[26/Feb/2010:11:25:38] ENGINE Bus EXITED
+[26/Feb/2010:11:25:38] ENGINE Waiting for child threads to terminate...
+[26/Feb/2010:11:25:38] ENGINE Re-spawning cgi-bin/techtales.py
+[26/Feb/2010:11:25:40] ENGINE Listening for SIGHUP.
+[26/Feb/2010:11:25:40] ENGINE Listening for SIGTERM.
+[26/Feb/2010:11:25:40] ENGINE Listening for SIGUSR1.
+[26/Feb/2010:11:25:40] ENGINE Bus STARTING
+[26/Feb/2010:11:25:40] ENGINE Started monitor thread '_TimeoutMonitor'.
+[26/Feb/2010:11:25:40] ENGINE Started monitor thread 'Autoreloader'.
+[26/Feb/2010:11:25:41] ENGINE Serving on 127.0.0.1:8080
+[26/Feb/2010:11:25:41] ENGINE Bus STARTED
+[26/Feb/2010:11:26:20] ENGINE Restarting because cgi-bin/techtales.py changed.
+[26/Feb/2010:11:26:20] ENGINE Stopped thread 'Autoreloader'.
+[26/Feb/2010:11:26:20] ENGINE Bus STOPPING
+[26/Feb/2010:11:26:20] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('127.0.0.1', 8080)) shut down
+[26/Feb/2010:11:26:20] ENGINE Stopped thread '_TimeoutMonitor'.
+[26/Feb/2010:11:26:20] ENGINE Bus STOPPED
+[26/Feb/2010:11:26:20] ENGINE Bus EXITING
+[26/Feb/2010:11:26:20] ENGINE Bus EXITED
+[26/Feb/2010:11:26:20] ENGINE Waiting for child threads to terminate...
+[26/Feb/2010:11:26:20] ENGINE Re-spawning cgi-bin/techtales.py
+[26/Feb/2010:11:26:22] ENGINE Listening for SIGHUP.
+[26/Feb/2010:11:26:22] ENGINE Listening for SIGTERM.
+[26/Feb/2010:11:26:22] ENGINE Listening for SIGUSR1.
+[26/Feb/2010:11:26:22] ENGINE Bus STARTING
+[26/Feb/2010:11:26:22] ENGINE Started monitor thread '_TimeoutMonitor'.
+[26/Feb/2010:11:26:22] ENGINE Started monitor thread 'Autoreloader'.
+[26/Feb/2010:11:26:22] ENGINE Serving on 127.0.0.1:8080
+[26/Feb/2010:11:26:22] ENGINE Bus STARTED
+[26/Feb/2010:11:26:28] ENGINE Keyboard Interrupt: shutting down bus
+[26/Feb/2010:11:26:28] ENGINE Bus STOPPING
+[26/Feb/2010:11:26:28] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('127.0.0.1', 8080)) shut down
+[26/Feb/2010:11:26:28] ENGINE Stopped thread 'Autoreloader'.
+[26/Feb/2010:11:26:28] ENGINE Stopped thread '_TimeoutMonitor'.
+[26/Feb/2010:11:26:28] ENGINE Bus STOPPED
+[26/Feb/2010:11:26:28] ENGINE Bus EXITING
+[26/Feb/2010:11:26:28] ENGINE Bus EXITED
+[26/Feb/2010:11:26:28] ENGINE Waiting for child threads to terminate...
+[26/Feb/2010:11:26:30] ENGINE Listening for SIGHUP.
+[26/Feb/2010:11:26:30] ENGINE Listening for SIGTERM.
+[26/Feb/2010:11:26:30] ENGINE Listening for SIGUSR1.
+[26/Feb/2010:11:26:30] ENGINE Bus STARTING
+[26/Feb/2010:11:26:30] ENGINE Started monitor thread '_TimeoutMonitor'.
+[26/Feb/2010:11:26:30] ENGINE Started monitor thread 'Autoreloader'.
+[26/Feb/2010:11:26:31] ENGINE Serving on 127.0.0.1:8080
+[26/Feb/2010:11:26:31] ENGINE Bus STARTED
+[26/Feb/2010:11:35:09] ENGINE Restarting because cgi-bin/techtales.py changed.
+[26/Feb/2010:11:35:09] ENGINE Stopped thread 'Autoreloader'.
+[26/Feb/2010:11:35:09] ENGINE Bus STOPPING
+[26/Feb/2010:11:35:09] ENGINE HTTP Server cherrypy._cpwsgi_server.CPWSGIServer(('127.0.0.1', 8080)) shut down
+[26/Feb/2010:11:35:09] ENGINE Stopped thread '_TimeoutMonitor'.
+[26/Feb/2010:11:35:09] ENGINE Bus STOPPED
+[26/Feb/2010:11:35:09] ENGINE Bus EXITING
+[26/Feb/2010:11:35:09] ENGINE Bus EXITED
+[26/Feb/2010:11:35:09] ENGINE Waiting for child threads to terminate...
+[26/Feb/2010:11:35:09] ENGINE Re-spawning cgi-bin/techtales.py
+[26/Feb/2010:11:35:11] ENGINE Listening for SIGHUP.
+[26/Feb/2010:11:35:11] ENGINE Listening for SIGTERM.
+[26/Feb/2010:11:35:11] ENGINE Listening for SIGUSR1.
+[26/Feb/2010:11:35:11] ENGINE Bus STARTING
+[26/Feb/2010:11:35:11] ENGINE Started monitor thread '_TimeoutMonitor'.
+[26/Feb/2010:11:35:11] ENGINE Started monitor thread 'Autoreloader'.
+[26/Feb/2010:11:35:12] ENGINE Serving on 127.0.0.1:8080
+[26/Feb/2010:11:35:12] ENGINE Bus STARTED
