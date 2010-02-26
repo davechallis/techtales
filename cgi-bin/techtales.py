@@ -8,13 +8,14 @@ from Extract import Extract
 #cherrypy.config['log.error_file'] = '/home/www/sites/techtales/logs/py_error.log'
 
 class Chart:
-	def default(self, url=None, field=None):
-		if not url or not field:
-			return dumps({'status':'error', 'message':'Need URI and field'})
+	def default(self, url=None, fields=None):
+		if not url or not fields:
+			return dumps({'status':'error', 'message':'Need URI and fields'})
 		extract = Extract(url)
 		data = extract.run()
 		chart = GoogleChart(data)
-		url = chart.get_graph_url_for_field(field)
+		field_arr = fields.split(",")
+		url = chart.get_graph_url_for_fields(field_arr)
 		return dumps({'status':'ok', 'url':url})		
 	
 	default.exposed = True

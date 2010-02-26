@@ -2,6 +2,11 @@
 	margin: 0;
 }
 
+#sections {
+	font-size: 18;
+	text-align: right;
+}
+
 h1 {
 	font-family: cursive;
 	font-size: 32pt;
@@ -27,7 +32,7 @@ html, body {
 	color: #fff;
 }
 
-#siteurl {
+.site {
 	font-size: 12pt;
 }
 
@@ -90,4 +95,10 @@ a {
 a:hover {
 	text-decoration: underline;
 	color: #eeeeff
+}
+
+#throbber {
+	display: none;
+	margin-top: 100px;
+	text-align: center;
 }

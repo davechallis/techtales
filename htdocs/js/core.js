@@ -6,19 +6,21 @@ function handleJSON(data, textStatus)
 		var img = $("<img />");
 		img.attr("src", data.url);
 		img.appendTo("#graph");
-		$("#graph").fadeIn();
+		$("#throbber").fadeOut(function() { $("#graph").fadeIn(); });
 	}
 }
 
 function getSiteGraph()
 {
-	var siteurl = $("#siteurl").val();
-	var tag1 = $("#tag1").val();
-	var tag2 = $("#tag2").val();
-	var tag3 = $("#tag3").val();
-	$.getJSON("/service/chart", {url:siteurl,field:tag1}, handleJSON);
-
-	$("#graph").fadeOut();
+	$("#graph").fadeOut(function()
+	{
+			$("#throbber").fadeIn();
+			var siteurl = $("#siteurl").val();
+			var tag1 = $("#tag1").val();
+			var tag2 = $("#tag2").val();
+			var tag3 = $("#tag3").val();
+			$.getJSON("/service/chart", {url:siteurl,fields:[tag1,tag2,tag3].join(",")}, handleJSON);
+	});
 }
 
 $(function() {
