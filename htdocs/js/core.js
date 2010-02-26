@@ -8,6 +8,11 @@ function handleJSON(data, textStatus)
 		img.appendTo("#graph");
 		$("#throbber").fadeOut(function() { $("#graph").fadeIn(); });
 	}
+	else
+	{
+		$("#graph").empty();
+		$("#throbber").fadeOut();
+	}
 }
 
 function getCombinedSiteGraph()
