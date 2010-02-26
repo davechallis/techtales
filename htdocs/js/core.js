@@ -5,5 +5,5 @@ function handleJSON(data, textStatus)
 	img.appendTo("#graphbox");
 }
 
-$.getJSON("/service/chart", {url:"www.ecs.soton.ac.uk",field:"link"}, handleJSON);
+$.getJSON("/service/chart", {url:"www.ecs.soton.ac.uk",field:"table"}, handleJSON);
 
