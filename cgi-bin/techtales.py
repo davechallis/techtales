@@ -49,6 +49,7 @@ class Stats:
 class Main:
 	stats = Stats()
 	chart = Chart()
+	comparechart = CompareChart()
 #
 # These methods take care of running the application via either mod_python or
 # stand-alone using the built-in CherryPy server.
