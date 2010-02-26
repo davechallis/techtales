@@ -20,7 +20,6 @@ class Extract(object):
                 self.results[date] = self.run_extractors()
         return self.results
 
-
     def run_extractors(self):
         skip = ('Extractor.py', '__init__.py')
 
