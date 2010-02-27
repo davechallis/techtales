@@ -21,7 +21,8 @@ class ColourExtractor(Extractor):
 			count += 1
 
         if count > 0:
-                results['red.ness'] /= count	
-                results['green.ness'] /= count	
-                results['blue.ness'] /= count	
+            results['red.ness'] /= count	
+            results['green.ness'] /= count	
+            results['blue.ness'] /= count	
+
 		return results 
