@@ -28,9 +28,23 @@
 <div class="grid_12">
 	<div class="grid_4 alpha">
 		<div class="formlabel">Site #1</div>
-		<div class="formrow"><input type="text" class="site" id="siteurl1" name="site" size="32" value="www.ecs.soton.ac.uk" /></div>
+        <div class="formrow"><select id="siteurl1">
+        <option value="www.ecs.soton.ac.uk">www.ecs.soton.ac.uk</option>
+        <option value="www.ic.ac.uk">www.ic.ac.uk</option>
+        <option value="www.jisc.ac.uk">www.jisc.ac.uk</option>
+        <option value="mit.edu">www.mit.edu</option>
+        <option value="www.ox.ac.uk">www.ox.ac.uk</option>
+        <option value="www.wikipedia.org">www.wikipedia.org</option>
+        </select></div>
 		<div class="formlabel">Site #2</div>
-		<div class="formrow"><input type="text" class="site" id="siteurl2" name="site" size="32" value="www.ic.ac.uk" /></div>
+        <div class="formrow"><select id="siteurl2">
+        <option value="www.ecs.soton.ac.uk">www.ecs.soton.ac.uk</option>
+        <option value="www.ic.ac.uk">www.ic.ac.uk</option>
+        <option selected="true" value="www.jisc.ac.uk">www.jisc.ac.uk</option>
+        <option value="mit.edu">www.mit.edu</option>
+        <option value="www.ox.ac.uk">www.ox.ac.uk</option>
+        <option value="www.wikipedia.org">www.wikipedia.org</option>
+        </select></div>
 		<div class="formlabel">Tag</div>
 		<div class="formrow"><input type="text" size="8" class="tag" id="tag" name="tag" value="div" /></div>
 		<div class="formrow"><input type="submit" id="submit" value="Analyze" /></div>

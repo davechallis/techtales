@@ -7,6 +7,10 @@
 	text-align: right;
 }
 
+select {
+    font-size: 24pt;
+}
+
 h1 {
 	font-family: cursive;
 	font-size: 32pt;
