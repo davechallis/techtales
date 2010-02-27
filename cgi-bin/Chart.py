@@ -1,13 +1,19 @@
 import sys
 import urllib
 import re
+import copy
 from Extract import Extract
-
 class Chart(object):
     def __init__(self, extracted_data):
         self.data = extracted_data
 
     def get_graph_url_for_fields(self, fields):
+        nfields = []
+        for field in fields:
+            if field.strip() != '':
+                nfields.append(field)
+
+        fields = nfields
         if len(fields) == 1:
             return self.get_graph_url_for_field(fields[0])
 
@@ -22,6 +28,7 @@ class Chart(object):
             total_years.append(year)
         total_years = list(set(total_years))
         total_years.sort()
+
         for year in range(int(total_years[0]), int(total_years[-1])+1):
             empty_chart_data[year] = {}
             for month in range(1,13):
@@ -31,7 +38,8 @@ class Chart(object):
 
         max = 0
         for field in fields:
-            chart_data = empty_chart_data.copy()
+            #chart_data = empty_chart_data.copy()
+            chart_data = copy.deepcopy(empty_chart_data)
             for date in dates:
                 year = int(date[0:4])
                 month = int(date[4:6])
@@ -39,8 +47,6 @@ class Chart(object):
                 if data[date].has_key(field):
                     number = int(data[date][field])
                     chart_data[year][month].append(number)
-                    if number > max:
-                        max = number
                 else:
                     chart_data[year][month].append(0)
 
@@ -69,6 +75,9 @@ class Chart(object):
                             total += num
                         avg = float(total) / len(mdata[month])
                         norm_data[year][month] = int(avg)
+                        avg = int(avg)
+                        if avg > max: max = avg
+
                 first_year = False
             field_data[field] = norm_data
 
@@ -121,6 +130,8 @@ class Chart(object):
             year = date[0:4]
             total_years.append(year)
         total_years = list(set(total_years))
+        total_years.sort()
+
 
         for year in range(int(total_years[0]), int(total_years[-1])+1):
             chart_data[year] = {}
@@ -135,8 +146,6 @@ class Chart(object):
             if data[date].has_key(field):
                 number = int(data[date][field])
                 chart_data[year][month].append(number)
-                if number > max:
-                    max = number
             else:
                 chart_data[year][month].append(0)
 
@@ -165,6 +174,8 @@ class Chart(object):
                         total += num
                     avg = float(total) / len(mdata[month])
                     norm_data[year][month] = int(avg)
+                    avg = int(avg)
+                    if avg > max: max = avg
 
             first_year = False
 
@@ -187,3 +198,4 @@ class Chart(object):
         }
         url = 'http://chart.apis.google.com/chart?' + urllib.urlencode(chart_query_data)
         return url
+

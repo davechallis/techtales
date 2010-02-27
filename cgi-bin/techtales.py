@@ -35,7 +35,16 @@ class Chart:
 		data = extract.run()
 		chart = GoogleChart(data)
 		field_arr = fields.split(",")
-		url = chart.get_graph_url_for_fields(field_arr)
+		nfield_arr = []
+		for field in field_arr:
+			field = field.strip()
+			if field != '':
+				nfield_arr.append(field)
+
+		if len(nfield_arr) == 1:
+			url = chart.get_graph_url_for_field(nfield_arr[0])
+		else:
+			url = chart.get_graph_url_for_fields(nfield_arr)
 		return dumps({'status':'ok', 'url':url})		
 	
 	default.exposed = True

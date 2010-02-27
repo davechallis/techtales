@@ -23,6 +23,7 @@ class ComparisonChart(object):
                 total_years.append(year)
 
         total_years = list(set(total_years))
+        total_years.sort()
 
         for (site, data) in ((self.site1,self.data1), (self.site2,self.data2)):
             chart_data = {}
@@ -51,7 +52,7 @@ class ComparisonChart(object):
             years = chart_data.keys()
             years.sort()
 
-            for y in range(int(years[0]), int(years[-1])+1):
+            for y in range(int(total_years[0]), int(total_years[-1])+1):
                 norm_data[y] = {}
                 for m in range(1,13):
                     norm_data[y][m] = 0

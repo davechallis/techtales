@@ -14,7 +14,6 @@ class ColourExtractor(Extractor):
 		
 		colours = re.findall(r'[\'"](#[a-zA-Z0-9]{6}|#[a-zA-Z0-9]{3})[\'"]', text, re.M|re.I)
 		for colour in colours:
-			print colour
 			rgb = hex_to_rgb(colour)
 			results['red.ness'] += rgb[0]
 			results['green.ness'] += rgb[1]
