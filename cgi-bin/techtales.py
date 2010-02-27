@@ -8,7 +8,7 @@ from Chart import Chart as GoogleChart
 from Extract import Extract
 #cherrypy.config['log.error_file'] = '/home/www/sites/techtales/logs/py_error.log'
 
-datapath = '/home/www/sites/techtales/data'
+datapath = '/home/www/sites/techtales/cgi-bin/data'
 cachepath = '/home/www/sites/techtales/cache'
 
 class CompareChart:
