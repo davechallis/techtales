@@ -26,11 +26,11 @@ html, body {
 	margin-bottom: 10px;
 }
 
-/*#submit {
+#submit {
 	border: 1px solid #ccc;
 	background: #000;
 	color: #fff;
-}*/
+}
 
 .site {
 	font-size: 12pt;
@@ -53,6 +53,7 @@ html, body {
 
 .footer
 {
+    text-align: right;
 	border-top: dashed 1px #222222;
 	width: 960px;
 	margin: auto;
