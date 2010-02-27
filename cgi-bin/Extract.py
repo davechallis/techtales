@@ -2,6 +2,7 @@ import os
 import os.path
 import sys
 import re
+import pickle
 
 class Extract(object):
     def __init__(self, site, datapath='data', cachepath='cache', extractorpath='extractors'):
@@ -17,7 +18,7 @@ class Extract(object):
         # If we have a cache, unpickle and return.
         if os.path.exists(cachefile):
             f = open(cachefile, 'r')
-            self.results = pickle.load(file) 
+            self.results = pickle.load(f) 
             f.close()
             return self.results
 
