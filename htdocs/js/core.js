@@ -40,4 +40,3 @@ function getSiteGraph()
 			$.getJSON("/service/chart", {url:siteurl,fields:[tag1,tag2,tag3].join(",")}, handleJSON);
 	});
 }
-
