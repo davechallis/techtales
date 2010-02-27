@@ -8,12 +8,15 @@ from Chart import Chart as GoogleChart
 from Extract import Extract
 #cherrypy.config['log.error_file'] = '/home/www/sites/techtales/logs/py_error.log'
 
+datapath = '/home/www/sites/techtales/data'
+cachepath = '/home/www/sites/techtales/cache'
+
 class CompareChart:
 	def default(self, url1=None, url2=None, field=None):
 		if not url1 or not url2 or not field:
 			return dumps({'status':'error', 'message':'Need URIs and field'})
-		extract1 = Extract(url1)
-		extract2 = Extract(url2)
+		extract1 = Extract(url1, datapath, cachepath) 
+		extract2 = Extract(url2, datapath, cachepath)
 		data1 = extract1.run()
 		data2 = extract2.run()
 		chart = ComparisonChart(url1, url2, data1, data2)
@@ -27,7 +30,7 @@ class Chart:
 	def default(self, url=None, fields=None):
 		if not url or not fields:
 			return dumps({'status':'error', 'message':'Need URI and fields'})
-		extract = Extract(url)
+		extract = Extract(url, datapath, cachepath)
 		data = extract.run()
 		chart = GoogleChart(data)
 		field_arr = fields.split(",")
@@ -40,7 +43,7 @@ class Stats:
 	def default(self, url=None):
 		if not url:
 		    return dumps({'status':'error', 'message':'Need URL'})
-		extract = Extract(url)
+		extract = Extract(url, datapath, cachepath)
 		data = extract.run()
 		return dumps({'status':'ok', 'data':data})
 

@@ -4,24 +4,26 @@ import sys
 import re
 
 class Extract(object):
-    def __init__(self, site):
+    def __init__(self, site, datapath='data', cachepath='cache'):
+        self.datapath = datapath
+        self.cachepath = cachepath
         self.site = site
         self.results = {}
         self.html = ''
 
     def run(self):
-        cachepath = 'cache/'+self.site
+        cachefile = self.cachepath+'/'+self.site
         # If we have a cache, unpickle and return.
-        if os.path.exists('cache/'+self.site):
-            f = open(cachepath, 'r')
+        if os.path.exists(cachefile):
+            f = open(cachefile, 'r')
             self.results = pickle.load(file) 
             f.close()
             return self.results
 
         # Otherwise do the processing.
-        for file in os.listdir('data'):
+        for file in os.listdir(self.datapath):
             if file.startswith(self.site):
-                f = open('data/' + file, 'r')
+                f = open(self.datapath+'/'+file, 'r')
                 self.html = f.read()
                 f.close()
 
@@ -29,7 +31,7 @@ class Extract(object):
                 self.results[date] = self.run_extractors()
 
         # Dump out the cache file        
-        cache = open(cachepath, 'w')
+        cache = open(cachefile, 'w')
         pickle.dump(self.results, cache)
         cache.close()
 
