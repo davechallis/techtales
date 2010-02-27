@@ -68,6 +68,7 @@ class DocTypeExtractor(Extractor):
 				results['doctype.mobile12'] = 1
 				results['doctype.mobile'] = 1
 				results['doctype.xhtml'] = 1
+				results['doctype.ness'] = 0
 
 		
 		s1 = re.search(r'<!DOCTYPE\s+(\S+)\s+SYSTEM\s+"(.+)">', text, re.M|re.I)
@@ -79,24 +80,31 @@ class DocTypeExtractor(Extractor):
 			if uri == "http://www.w3.org/TR/html4/strict.dtd":
 				results['doctype.html401_strict'] = 1
 				results['doctype.html'] = 1
+				results['doctype.ness'] = 3
 			elif uri == "http://www.w3.org/TR/html4/loose.dtd":
 				results['doctype.html401_transitional'] = 1
 				results['doctype.html'] = 1
+				results['doctype.ness'] = 2
 			elif uri == "http://www.w3.org/TR/html4/frameset.dtd":
 				results['doctype.html401_frames'] = 1
 				results['doctype.html'] = 1
+				results['doctype.ness'] = 1
 			elif uri == "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd":
 				results['doctype.xhtml1_strict'] = 1
 				results['doctype.xhtml'] = 1
+				results['doctype.ness'] = 6
 			elif uri == "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd":
 				results['doctype.xhtml1_transitional'] = 1
 				results['doctype.xhtml'] = 1
+				results['doctype.ness'] = 5
 			elif uri == "http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd":
 				results['doctype.xhtml1_frames'] = 1
 				results['doctype.xhtml'] = 1
+				results['doctype.ness'] = 4
 			elif uri == "http://www.w3.org/TR/xhtml1/DTD/xhtml11.dtd":
 				results['doctype.xhtml11'] = 1
 				results['doctype.xhtml'] = 1
+				results['doctype.ness'] = 7
 			elif uri == "http://www.w3.org/TR/xhtml-basic/xhtml-basic10.dtd":
 				results['doctype.xhtml10_basic'] = 1
 				results['doctype.xhtml10'] = 1
@@ -122,5 +130,6 @@ class DocTypeExtractor(Extractor):
 		if d1:
 			root = d1.group(1)
 			results['doctype.html5'] = 1
+			results['doctype.ness'] = 8
 
 		return results 
