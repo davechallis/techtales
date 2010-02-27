@@ -35,12 +35,7 @@ class Chart:
 		data = extract.run()
 		chart = GoogleChart(data)
 		field_arr = fields.split(",")
-        act_array = list()
-        for f in field_arr:
-            if f:
-                act_array.append(f)
-
-        url = chart.get_graph_url_for_fields(act_array)
+        url = chart.get_graph_url_for_fields(field_arr)
         return dumps({'status':'ok', 'url':url})		
 	
 	default.exposed = True
