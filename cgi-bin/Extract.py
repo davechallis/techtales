@@ -4,9 +4,10 @@ import sys
 import re
 
 class Extract(object):
-    def __init__(self, site, datapath='data', cachepath='cache'):
+    def __init__(self, site, datapath='data', cachepath='cache', extractorpath='extractors'):
         self.datapath = datapath
         self.cachepath = cachepath
+        self.extractorpath = extractorpath
         self.site = site
         self.results = {}
         self.html = ''
@@ -42,7 +43,7 @@ class Extract(object):
 
         data = {}
 
-        for file in os.listdir('extractors'):
+        for file in os.listdir(self.extractorpath):
             if file.endswith('.pyc'):
                 continue
 
