@@ -10,6 +10,15 @@ class Extract(object):
         self.html = ''
 
     def run(self):
+        cachepath = 'cache/'+self.site
+        # If we have a cache, unpickle and return.
+        if os.path.exists('cache/'+self.site):
+            f = open(cachepath, 'r')
+            self.results = pickle.load(file) 
+            f.close()
+            return self.results
+
+        # Otherwise do the processing.
         for file in os.listdir('data'):
             if file.startswith(self.site):
                 f = open('data/' + file, 'r')
@@ -18,6 +27,12 @@ class Extract(object):
 
                 date = file.split('.').pop()
                 self.results[date] = self.run_extractors()
+
+        # Dump out the cache file        
+        cache = open(cachepath, 'w')
+        pickle.dump(self.results, cache)
+        cache.close()
+
         return self.results
 
     def run_extractors(self):
