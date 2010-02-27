@@ -5,7 +5,7 @@ class DocTypeExtractor(Extractor):
 
 	def run(self, text):
 		results = dict()
-
+		results['doctype.ness'] = 0
 		root = None
 		fpi = None
 		uri = None
